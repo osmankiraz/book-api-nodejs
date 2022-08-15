@@ -12,11 +12,11 @@ const bookSchema = new Schema({
     required: true,
   },
   price: {
-    type: number,
+    type: Number,
     required: true,
   },
   stock:{
-    type:number,
+    type:Number,
     required:true
   },
   created:{
