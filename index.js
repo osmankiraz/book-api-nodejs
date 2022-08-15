@@ -1,9 +1,11 @@
 let express = require("express");
 let bodyParser = require("body-parser");
 require('./db/connection')
-
 const dotenv = require("dotenv").config();
 let cors = require("cors");
+const apiRouter=require("./api-router")
+
+
 
 let port = process.env.port;
 
@@ -13,6 +15,8 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
+
+app.use("/api",apiRouter)
 app.get("/",(req,res) =>{
     res.send("hello world ! ")
 })
