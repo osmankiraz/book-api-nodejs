@@ -27,7 +27,7 @@ class response {
 
   badRequest(res) {
     return res.status(400).json({
-      status: "success",
+      status: "error",
       errors: this.errors,
     });
   }
